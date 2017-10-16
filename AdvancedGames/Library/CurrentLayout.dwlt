@@ -394,9 +394,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -11.269884, y: 6.2248864, z: -4.1335945}
+    m_Target: {x: -3.1838608, y: -2.6391635, z: 4.110279}
     speed: 2
-    m_Value: {x: -11.269884, y: 6.2248864, z: -4.1335945}
+    m_Value: {x: -3.1838608, y: -2.6391635, z: 4.110279}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -419,13 +419,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.051309764, y: -0.3536586, z: 0.019445172, w: -0.93378705}
+    m_Target: {x: -0.057869565, y: 0.37202144, z: -0.023230216, w: -0.9261517}
     speed: 2
-    m_Value: {x: -0.051309768, y: -0.3536586, z: 0.019445173, w: -0.93378705}
+    m_Value: {x: -0.057868253, y: 0.372013, z: -0.02322969, w: -0.9261307}
   m_Size:
-    m_Target: 55.468
+    m_Target: 66.743195
     speed: 2
-    m_Value: 55.468
+    m_Value: 66.743195
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -464,9 +464,9 @@ MonoBehaviour:
     height: 684
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 18fcffff
-    m_LastClickedID: -1000
-    m_ExpandedIDs: 1afcffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 70b2ffff56d0ffff1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -553,19 +553,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/GrassAndRain/GrassExport
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/GrassAndRain/GrassExport
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Cole\Desktop\TechArt\ADV_GMAP_Class\RainAndGrass
+  m_LastProjectPath: C:\Users\Cole\Desktop\TechArt\Mueller-TechArt\AdvancedGames
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 18260000
-    m_LastClickedID: 9752
-    m_ExpandedIDs: 0000000018260000362600004426000084260000bc260000ec260000042700002827000000ca9a3bffffff7f
+    m_SelectedIDs: 28260000
+    m_LastClickedID: 9768
+    m_ExpandedIDs: 00000000182600003626000044260000bc2600000427000028270000da27000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,22 +620,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: f666000000000000282ffdffd02e0000de2600004a260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Assignment1
+      m_OriginalName: Assignment1
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10788
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
