@@ -65,7 +65,10 @@ Shader "Custom/GrassGeometry" {
 
 		#include "UnityCG.cginc"
 		#include "UnityLightingCommon.cginc" // Lighting stuff
+		#include "Lighting.cginc"
 
+		#pragma multi_compile_fwdbase nolightmap nodirlightmap nodynlightmap novertexlight
+		#include "AutoLight.cginc"
 		// Use shader model 4.0 target, to get geometry support
 		#pragma target 4.0
 
@@ -78,12 +81,14 @@ Shader "Custom/GrassGeometry" {
 			float4 pos : SV_POSITION;
 
 			//LIGHTING STUFF
-			float4 diff : COLOR0;
+			float3 diff : COLOR0;
+			float3 ambient : COLOR1;
 			//==============
 
 			float3 norm : NORMAL;
 			float2 uv : TEXCOORD0;
-			float3 color : TEXCOORD1;
+			SHADOW_COORDS(1)
+			//float3 color : TEXCOORD1;  //commented out because of lighting stuff
 		};
 
 		struct g2f
@@ -91,12 +96,14 @@ Shader "Custom/GrassGeometry" {
 			float4 pos : SV_POSITION;
 
 			//LIGHTING STUFF
-			float4 diff : COLOR0;
+			float3 diff : COLOR0;
+			float3 ambient : COLOR1;
 			//==============
 
 			float3 norm : NORMAL;
 			float2 uv : TEXCOORD0;
-			float3 diffuseColor : TEXCOORD1;
+			SHADOW_COORDS(1)
+			//float3 diffuseColor : TEXCOORD1; //commented out because of lighting stuff
 		};
 
 		//half _Glossiness;
@@ -120,7 +127,7 @@ Shader "Custom/GrassGeometry" {
 			float3 v0 = v.vertex.xyz;
 
 			v2g OUT;
-			OUT.pos = v.vertex;  //replaced by lighting stuff, uncomment for working grass
+			OUT.pos = v.vertex;  
 			//OUT.pos = UnityObjectToClipPos(v.vertex); //LIGHTING STUFF
 			//================
 			OUT.norm = v.normal;
@@ -129,12 +136,13 @@ Shader "Custom/GrassGeometry" {
 			//LIGHTING STUFF
 			half3 worldNormal = UnityObjectToWorldNormal(v.normal);
 			half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
-			OUT.diff = nl * _LightColor0;
-
-			OUT.diff.rgb += ShadeSH9(half4(worldNormal,1)); //Indirect/ambient Light
+			OUT.diff = nl * _LightColor0.rgb;
+			OUT.ambient = (0,0,0);
+			OUT.ambient += ShadeSH9(half4(worldNormal,1)); //Indirect/ambient Light
+			TRANSFER_SHADOW(OUT)
 			//==============
 
-			OUT.color = tex2Dlod(_MainTex, v.texcoord).rgb;
+			//OUT.color = tex2Dlod(_MainTex, v.texcoord).rgb;  //commented out because of lighting stuff
 			return OUT;
 		}
 
@@ -153,14 +161,16 @@ Shader "Custom/GrassGeometry" {
 			{
 				OUT.pos = UnityObjectToClipPos(points[i]);
 				OUT.norm = faceNormal;
-				OUT.diffuseColor = color;
+				//OUT.diffuseColor = color;  //commented out because of lighting stuff
 				OUT.uv = float2(i % 2, (int)i/2);
 
 				//LIGHTING STUFF
 				half3 worldNormal = UnityObjectToWorldNormal(points[i]);
 				//half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
-				OUT.diff = _LightColor0;
-				OUT.diff.rgb += ShadeSH9(half4(worldNormal,1));  //Indirect/ambient Light
+				OUT.diff = _LightColor0.rgb;
+				OUT.ambient = (0,0,0);
+				OUT.ambient += ShadeSH9(half4(worldNormal,1));  //Indirect/ambient Light
+				TRANSFER_SHADOW(OUT)
 				//===============
 
 				triStream.Append(OUT);
@@ -189,7 +199,7 @@ Shader "Custom/GrassGeometry" {
 			cos(_Time.x * _WindSpeed + v0.x * 2 * _WindVariance) + cos(_Time.x * _WindSpeed + v0.z));
 			v1 += wind * _WindStrength;
 
-			float3 color = (IN[0].color);
+			float3 color = (IN[0].ambient); //should be IN[0].color
 
 			float sin30 = 0.5;
 			float sin60 = 0.866;
@@ -238,20 +248,24 @@ Shader "Custom/GrassGeometry" {
 		{
 			fixed4 c = tex2D(_MainTex, IN.uv);
 			clip(c.a - _Cutoff);
-
-
-			c *= _Tint; //original return
-			return c * IN.diff; //Lighting return -- was originally "return c * _Tint;"
+			//LIGHTING STUFF
+			fixed shadow = SHADOW_ATTENUATION(IN);
+			fixed3 lighting = IN.diff * shadow + IN.ambient;
+			c.rgb *= lighting;
+			//===============
+			
+			return c *= _Tint; //original return
+			//return c * IN.diff; //Lighting return -- was originally "return c * _Tint;"
 			//return c;
-			//return float4(IN.diffuseColor.rgb, 1.0);
+			//return float4(IN.diffuseColor.rgb, 1.0);  //distortion stuff
 		}
 
 			ENDCG
 
 		}
 
-
-			
+		//UsePass "Legacy Shaders/VertexLit/SHADOWCASTER" //automatic shadow caster. Doesn't work.
+	
 		}
 	
 }
