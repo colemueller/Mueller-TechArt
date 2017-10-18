@@ -46,6 +46,7 @@ Shader "Custom/GrassGeometry" {
 	}
 
 	SubShader {
+
 		Tags { "RenderType"="Opaque" }
 		LOD 200
 
@@ -129,6 +130,8 @@ Shader "Custom/GrassGeometry" {
 			half3 worldNormal = UnityObjectToWorldNormal(v.normal);
 			half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
 			OUT.diff = nl * _LightColor0;
+
+			OUT.diff.rgb += ShadeSH9(half4(worldNormal,1)); //Indirect/ambient Light
 			//==============
 
 			OUT.color = tex2Dlod(_MainTex, v.texcoord).rgb;
@@ -155,8 +158,9 @@ Shader "Custom/GrassGeometry" {
 
 				//LIGHTING STUFF
 				half3 worldNormal = UnityObjectToWorldNormal(points[i]);
-				half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+				//half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
 				OUT.diff = _LightColor0;
+				OUT.diff.rgb += ShadeSH9(half4(worldNormal,1));  //Indirect/ambient Light
 				//===============
 
 				triStream.Append(OUT);
@@ -245,7 +249,9 @@ Shader "Custom/GrassGeometry" {
 			ENDCG
 
 		}
-		
+
+
+			
 		}
 	
 }
