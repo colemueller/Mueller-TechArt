@@ -119,8 +119,8 @@ Shader "Custom/GrassGeometry" {
 			float3 v0 = v.vertex.xyz;
 
 			v2g OUT;
-			//OUT.pos = v.vertex;  //replaced by lighting stuff, uncomment for working grass
-			OUT.pos = UnityObjectToClipPos(v.vertex); //LIGHTING STUFF
+			OUT.pos = v.vertex;  //replaced by lighting stuff, uncomment for working grass
+			//OUT.pos = UnityObjectToClipPos(v.vertex); //LIGHTING STUFF
 			//================
 			OUT.norm = v.normal;
 			OUT.uv = v.texcoord;
@@ -154,9 +154,9 @@ Shader "Custom/GrassGeometry" {
 				OUT.uv = float2(i % 2, (int)i/2);
 
 				//LIGHTING STUFF
-				half3 worldNormal = UnityObjectToWorldNormal(faceNormal);
+				half3 worldNormal = UnityObjectToWorldNormal(points[i]);
 				half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
-				OUT.diff = nl * _LightColor0;
+				OUT.diff = _LightColor0;
 				//===============
 
 				triStream.Append(OUT);
@@ -238,6 +238,7 @@ Shader "Custom/GrassGeometry" {
 
 			c *= _Tint; //original return
 			return c * IN.diff; //Lighting return -- was originally "return c * _Tint;"
+			//return c;
 			//return float4(IN.diffuseColor.rgb, 1.0);
 		}
 
