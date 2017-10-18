@@ -52,7 +52,7 @@ Shader "Custom/GrassGeometry" {
 		Pass
 	{
 
-		//CULL OFF
+		CULL OFF
 
 		Tags { "LightMode"="ForwardBase" }
 
