@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/GrassAndRain/terrain.unity
+- path: Assets/Assignment2/main.unity
   isLoaded: 1
   isActive: 1
