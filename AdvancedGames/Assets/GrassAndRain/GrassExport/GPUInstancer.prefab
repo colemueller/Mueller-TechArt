@@ -51,10 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6b874aae2743b4ca79572ab50ae79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grassMesh: {fileID: 4300002, guid: bf4eab9b43b0ec14b8b9b2a1447901bb, type: 3}
+  grassMesh: {fileID: 4300002, guid: 58af21e5e00a00141b2104a359a43003, type: 3}
   material: {fileID: 2100000, guid: 64e70714daaab1c4ab2a8dda5f127ce0, type: 2}
   seed: 0
   size: {x: 0, y: 0}
   grassNumber: 1
-  startHeight: 1
-  heightOffset: 1.8
+  GeneratorStartHeight: 1000
+  grassOffset: 0
+  grassHeight: 1
+  grassWidth: 1

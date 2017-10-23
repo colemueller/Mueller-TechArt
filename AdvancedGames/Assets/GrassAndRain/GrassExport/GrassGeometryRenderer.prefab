@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 33593193343330892}
   - component: {fileID: 23006195157861896}
   m_Layer: 0
-  m_Name: GrassRenderer
+  m_Name: GrassGeometryRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
