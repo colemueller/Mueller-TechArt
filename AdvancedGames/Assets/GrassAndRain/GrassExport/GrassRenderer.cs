@@ -20,6 +20,12 @@ public class GrassRenderer : MonoBehaviour {
     public float grassHeight = 1;
     public float grassWidth = 1;
 
+	//public float _WindSpeed;
+	//public float _WindStrength;
+	//public float _WindVariance;
+
+
+
 	void Update () {
 		
 		//Consider putting in start
@@ -43,6 +49,30 @@ public class GrassRenderer : MonoBehaviour {
 			}
 				
 		}
+
+
+		//WIND
+		//List<Vector3> list = new List<Vector3>();
+
+		//for(int i=0; i < grassMesh.vertices.Length; i++)
+		//{
+		//	Vector3 v0 = grassMesh.vertices [i];
+
+
+		//	if (i == 2 || i == 3 || i == 6 || i == 7 || i == 10 || i == 11 || i == 14 || i == 15 || i == 18 || i == 19 || i == 22 || i == 23)
+		//	{
+
+				//Vector3 wind = new Vector3 (1,0,1);
+				//v0 = wind * _WindStrength;
+
+		//	}
+
+		//	list.Add (v0);
+		//	i++;
+		//}
+		//grassMesh.SetVertices (list);
+		//grassMesh.vertices = list;
+
 
 		Graphics.DrawMeshInstanced (grassMesh, 0, material, materices);
 	}
