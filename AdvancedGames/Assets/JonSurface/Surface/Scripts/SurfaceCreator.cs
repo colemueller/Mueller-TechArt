@@ -163,7 +163,8 @@ public class SurfaceCreator : MonoBehaviour {
 			CalculateNormals();
 		}
 		mesh.normals = normals;
-	}
+        GetComponent<MeshCollider>().sharedMesh = mesh;
+    }
 
 	// Create a mesh
 	private void CreateGrid()
