@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &163101258
 Light:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 326762553}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.85294116, g: 0.8904665, b: 1, a: 1}
@@ -504,6 +504,7 @@ GameObject:
   - component: {fileID: 714763752}
   - component: {fileID: 714763751}
   - component: {fileID: 714763750}
+  - component: {fileID: 714763753}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -565,6 +566,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &714763753
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714763749}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1001 &877546523
 Prefab:
   m_ObjectHideFlags: 0
@@ -873,7 +906,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 959338404}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.98985803, b: 0.85294116, a: 1}
@@ -1162,7 +1195,7 @@ Prefab:
     - target: {fileID: 215763662927682076, guid: 64e9a0e17c9264d078fbe81846f69abd,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 215763662927682076, guid: 64e9a0e17c9264d078fbe81846f69abd,
         type: 2}
@@ -1323,7 +1356,7 @@ MonoBehaviour:
   ScatteringCoef: 0.995
   ExtinctionCoef: 0.1
   SkyboxExtinctionCoef: 0.9
-  MieG: 0.958
+  MieG: 0.384
   HeightFog: 0
   HeightScale: 0
   GroundLevel: 0
@@ -1558,7 +1591,7 @@ MonoBehaviour:
   ScatteringCoef: 0.995
   ExtinctionCoef: 0.1
   SkyboxExtinctionCoef: 0.9
-  MieG: 0.958
+  MieG: 0.384
   HeightFog: 0
   HeightScale: 0
   GroundLevel: 0
@@ -1653,7 +1686,7 @@ ReflectionProbe:
     type: 2}
   m_PrefabInternal: {fileID: 1337172750}
   m_GameObject: {fileID: 1822974934}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Type: 0
   m_Mode: 2

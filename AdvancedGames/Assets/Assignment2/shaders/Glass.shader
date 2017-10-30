@@ -6,7 +6,7 @@
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
 		_Metallic ("Metallic", Range(0,1)) = 0.0
-		_Thickness ("Thickness", Range(-1,1)) = 0.5 //CHANGED
+		_Thickness ("Thickness", Range(-10,10)) = 0.5 //CHANGED
 		_BumpMap ("Normal Map", 2D) = "bump" {}
 		_BumpStrength ("Normal Map Strength", Range(-10,10)) = 1.0
 	}
@@ -16,6 +16,11 @@
 		Tags { "RenderType"="Transparent" } //CHANGED
 		LOD 200
 		Cull Back //CHANGED
+
+		GrabPass
+        {
+            "_BackgroundTexture"
+        }
 		
 		CGPROGRAM
 
@@ -29,9 +34,14 @@
 		{
 			float2 uv_MainTex;
 			float2 uv_BumpMap;
+			float3 worldNormal;
+			float4 pos;
+			float4 grabPos;
+			INTERNAL_DATA
 		};
 
-		sampler2D _MainTex;
+		//sampler2D _MainTex;
+		sampler2D _BackgroundTexture;
 		sampler2D _BumpMap;
 		half _Glossiness;
 		half _Metallic;
@@ -48,7 +58,7 @@
 		void surf (Input IN, inout SurfaceOutputStandard o) 
 		{
 			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+			fixed4 c = tex2Dproj(_BackgroundTexture, IN.grabPos + (IN.worldNormal.x * .5 + .5))+ IN.worldNormal.x;
 			o.Albedo = c.rgb;
 
 			o.Normal = UnpackNormal (tex2D (_BumpMap, IN.uv_BumpMap) * _BumpStrength);
@@ -59,7 +69,7 @@
 		}
 
 		ENDCG
-
+		
 		Cull Front
 		CGPROGRAM
 		#pragma surface surf Standard fullforwardshadows alpha vertex:vert
@@ -78,7 +88,7 @@
 		fixed4 _Color;
 
 		void surf (Input IN, inout SurfaceOutputStandard o)
-		{
+		{			
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo = c.rgb;
 			o.Metallic = _Metallic;
@@ -86,6 +96,7 @@
 			o.Alpha = c.a;
 		}
 		ENDCG
+		
 	}
 
 	FallBack "Diffuse"
