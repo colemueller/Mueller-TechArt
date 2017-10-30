@@ -7,8 +7,8 @@
 		// Color is used only to set influence of alpha
 		_Color ("Color", Color) = (1,1,1,1)
 
-		// Reflection Map WHAT IS THIS
-		_Cube ("Reflection Cubemap", Cube) = "_Skybox" { TexGen CubeReflect }
+		// Reflection Map
+		_Cube ("Reflection Cubemap", Cube) = "" {}
 
 		// Reflection Tint - leave as white to display reflection texture exactly as cubemap
 		_ReflectColor ("Reflection Color", Color) = (1,1,1,0.5)
@@ -90,7 +90,7 @@
 
 			//Reflection Cube
 			fixed4 reflcol = texCUBE (_Cube, IN.worldRefl);
-			reflcol *= c.a;
+			//reflcol *= c.a;
 			o.Emission = reflcol.rgb * _ReflectColor.rgb * _ReflectBrightness;
 			o.Alpha = o.Alpha * _ReflectColor.a;
 

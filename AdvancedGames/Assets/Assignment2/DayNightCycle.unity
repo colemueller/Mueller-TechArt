@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 1
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.11353806, g: 0.16928169, b: 0.18382353, a: 1}
+  m_AmbientSkyColor: {r: 0.09991349, g: 0.16063116, b: 0.17647058, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 9991b6265f7f87d43b7e3c676739f203, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1101,6 +1101,77 @@ Transform:
   m_PrefabParentObject: {fileID: 4520211572873054, guid: 629c53af213ecdf4d82585964a3c742e,
     type: 2}
   m_PrefabInternal: {fileID: 909907547}
+--- !u!1001 &1337172750
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.3417889
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.1985948
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178182794699976, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+      propertyPath: m_Name
+      value: Archway Reflection Probe
+      objectReference: {fileID: 0}
+    - target: {fileID: 215763662927682076, guid: 64e9a0e17c9264d078fbe81846f69abd,
+        type: 2}
+      propertyPath: m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 215763662927682076, guid: 64e9a0e17c9264d078fbe81846f69abd,
+        type: 2}
+      propertyPath: m_Resolution
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 215763662927682076, guid: 64e9a0e17c9264d078fbe81846f69abd,
+        type: 2}
+      propertyPath: m_CustomBakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 0213b870f2e3c4056a7bbd2f257fbb55, type: 3}
+    - target: {fileID: 215763662927682076, guid: 64e9a0e17c9264d078fbe81846f69abd,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215763662927682076, guid: 64e9a0e17c9264d078fbe81846f69abd,
+        type: 2}
+      propertyPath: m_IntensityMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 64e9a0e17c9264d078fbe81846f69abd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1380954995
 Prefab:
   m_ObjectHideFlags: 0
@@ -1558,6 +1629,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ad6309a79e842eca9d6bcb99f58d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1822974934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1178182794699976, guid: 64e9a0e17c9264d078fbe81846f69abd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337172750}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1822974936}
+  - component: {fileID: 1822974935}
+  m_Layer: 0
+  m_Name: Archway Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &1822974935
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 215763662927682076, guid: 64e9a0e17c9264d078fbe81846f69abd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337172750}
+  m_GameObject: {fileID: 1822974934}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 2
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 256
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 0.5
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 8900000, guid: 0213b870f2e3c4056a7bbd2f257fbb55,
+    type: 3}
+--- !u!4 &1822974936
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4762777602397480, guid: 64e9a0e17c9264d078fbe81846f69abd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337172750}
+  m_GameObject: {fileID: 1822974934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3417889, y: 4.17, z: -1.1985948}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1833110991
 Prefab:
   m_ObjectHideFlags: 0
