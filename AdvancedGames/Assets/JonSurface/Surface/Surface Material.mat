@@ -112,11 +112,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BlendAreaSize: 0.256
-    - _BlendAreaSize01: 0.106
-    - _BlendAreaSize02: 0.106
+    - _BlendAreaSize01: 1
+    - _BlendAreaSize02: 1
     - _BlendHeight: -0.263
-    - _BlendHeight01: -0.275
-    - _BlendHeight02: 0.065
+    - _BlendHeight01: -0.5
+    - _BlendHeight02: 0.5
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1

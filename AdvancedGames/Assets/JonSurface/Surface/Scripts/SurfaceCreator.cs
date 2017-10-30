@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
+
 public class SurfaceCreator : MonoBehaviour {
 
 	[Range(1, 200)]
@@ -69,6 +70,7 @@ public class SurfaceCreator : MonoBehaviour {
 			mesh = new Mesh ();
 			mesh.name = "Surface Mesh";
 			GetComponent<MeshFilter> ().mesh = mesh;
+            GetComponent<MeshCollider>().sharedMesh = mesh;
 		}
 
 		Refresh ();

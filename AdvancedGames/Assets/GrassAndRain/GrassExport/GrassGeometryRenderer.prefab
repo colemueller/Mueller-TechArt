@@ -94,8 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   filter: {fileID: 33593193343330892}
   seed: 0
-  size: {x: 79, y: 79}
-  grassNumber: 17144
+  size: {x: 120, y: 75}
+  grassNumber: 60000
   startHeight: 10
   grassOffset: 0
   UvScalar: 10
