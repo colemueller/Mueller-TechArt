@@ -330,12 +330,12 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -1314,7 +1314,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2ff47cdd40beb8f4092d0f141d53a55f, type: 2}
+  - {fileID: 2100000, guid: 5c89c809778faf84fa8368be9dd7c761, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1361,7 +1361,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1448457876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.01, z: 0}
+  m_LocalPosition: {x: 0, y: -6.69, z: 0}
   m_LocalScale: {x: 5.550706, y: 5.550707, z: 5.550707}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1581,8 +1581,8 @@ MonoBehaviour:
   SampleCount: 11
   ScatteringCoef: 0.995
   ExtinctionCoef: 0.1
-  SkyboxExtinctionCoef: 0.9
-  MieG: 0.958
+  SkyboxExtinctionCoef: 1
+  MieG: 0.843
   HeightFog: 0
   HeightScale: 0
   GroundLevel: 0
