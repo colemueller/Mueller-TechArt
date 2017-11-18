@@ -37,4 +37,4 @@ Material:
     - _RippleSpeed: 40
     m_Colors:
     - _Color: {r: 0, g: 0.6275863, b: 1, a: 1}
-    - _NoiseColor: {r: 0.28676468, g: 0.28676468, b: 0.28676468, a: 0.169}
+    - _NoiseColor: {r: 0.28676465, g: 0.28676465, b: 0.28676465, a: 0.632}
