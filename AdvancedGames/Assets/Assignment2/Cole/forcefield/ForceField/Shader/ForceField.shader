@@ -121,7 +121,7 @@ fixed4 frag(v2f i) : SV_Target
 
 	
 	float3 viewDir = normalize(UnityWorldSpaceViewDir(mul(unity_ObjectToWorld, i.vertex)));
-	float rim = 1 - abs(dot(i.normal, normalize(i.viewDir))) * _RimStrength;
+	float rim = abs(dot(i.normal, normalize(i.viewDir))) * 1 / _RimStrength;
 	float glow = max(intersect, rim);
 
 	
