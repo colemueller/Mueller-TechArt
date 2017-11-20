@@ -39,7 +39,6 @@ public class Controller : MonoBehaviour {
             transform.Rotate(Vector3.right, (50 * -b) * Time.deltaTime);
         }
 
-        //transform.Rotate(Vector3.up, (50 * (h * turnAmount)) * Time.deltaTime);
         transform.RotateAround(Vector3.up, (h * turnAmount) * Time.deltaTime);
         transform.Translate((Vector3.forward * v) * movespeed * Time.deltaTime);
         

@@ -5,25 +5,24 @@ using UnityEngine;
 public class WaterTrigger : MonoBehaviour {
 
     public GameObject fish;
-
-	// Use this for initialization
-	void Start () {
-        fish.GetComponent<Rigidbody>().useGravity = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject cam;
+    public Transform closePos;
+    public Transform farPos;
 
     private void OnTriggerExit(Collider other)
     {
-        fish.GetComponent<Rigidbody>().useGravity = true;
+        cam.transform.position = Vector3.Lerp(cam.transform.position, closePos.position, 2);
+        cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, closePos.rotation, 2);
+        cam.GetComponent<camTex>().enabled = true;
     }
+    
+       
 
     private void OnTriggerEnter(Collider other)
     {
-        fish.GetComponent<Rigidbody>().useGravity = false;
+        cam.transform.position = Vector3.Lerp(cam.transform.position, farPos.position, 2 );
+        cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, farPos.rotation, 2);
         fish.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        cam.GetComponent<camTex>().enabled = false;
     }
 }
