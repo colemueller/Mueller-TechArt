@@ -30,7 +30,8 @@ Shader "Custom/SwimCycle" {
 		//Cull off
 
 		CGPROGRAM
-		#pragma surface surf Standard fullforwardshadows vertex:vert addshadow
+		#pragma surface surf Standard fullforwardshadows vertex:vert addshadow 
+		
 		#pragma target 3.0
 
 		sampler2D _MainTex;

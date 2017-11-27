@@ -89,7 +89,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HighlightThresholdMax: 1
-    - _IntersectPower: 2.18
+    - _IntersectPower: 1.7
     - _LightAmount: 1
     - _Metallic: 0
     - _Mode: 0
@@ -99,7 +99,7 @@ Material:
     - _RimPower: 3
     - _RimStrength: 2
     - _RippleFrequency: 1
-    - _RippleScale: 0
+    - _RippleScale: 0.31
     - _RippleSpeed: 50
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -107,7 +107,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0.46206903, b: 1, a: 0.353}
+    - _Color: {r: 0.054498263, g: 0.41176462, b: 0.38219783, a: 0.353}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HighlightColor: {r: 1, g: 0, b: 0, a: 0.5}
     - _NoiseColor: {r: 0.50735295, g: 0.50735295, b: 0.50735295, a: 0.134}
