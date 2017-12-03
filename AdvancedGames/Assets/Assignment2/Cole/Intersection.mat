@@ -99,7 +99,7 @@ Material:
     - _RimPower: 3
     - _RimStrength: 2
     - _RippleFrequency: 1
-    - _RippleScale: 0.1
+    - _RippleScale: 0.2
     - _RippleSpeed: 20
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
