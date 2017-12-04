@@ -43,7 +43,7 @@ public class GetFood : MonoBehaviour {
     {
         if (goUp)
         {
-            tempSpeed = Mathf.SmoothDamp(fishController.movespeed, 6, ref refVal, 0.5f);
+            tempSpeed = Mathf.SmoothDamp(fishController.movespeed, 4, ref refVal, 0.5f);
         }
         else
         {
