@@ -20,6 +20,7 @@ Shader "Custom/SwimCycle" {
 		_FrequencyZ("FrequencyZ", Range(0, 10)) = 1
 		_AmplitudeZ("AmplitudeZ", Range(0,  2)) = 1
 
+		_Phase("Phase", Range(-10, 10)) = 0
 		_HeadLimit("HeadLimit", Range(-2,  2)) = 0.05
 	}
 
@@ -65,6 +66,7 @@ Shader "Custom/SwimCycle" {
 
 		// Head Limit (Head wont shake so much)
 
+		float _Phase;
 		float _HeadLimit;
 
 
@@ -80,14 +82,26 @@ Shader "Custom/SwimCycle" {
 
 			//X AXIS
 
+			// y(t) = A * sin(ωt + θ) [Basic Sine Wave Equation]
+         	// A = amplitude 
+         	// ω = AngularFrequency ((2*PI)f)
+         	// f = 1/T | T = [period (s)]
+         	// θ = phase
+         	// t = elapsedTime
+
+
+			// If the vertices are beyond the HeadLimit
 			if (v.vertex.z > _HeadLimit)
 			{
-				v.vertex.x += sin((0.05 + _Time.y * _SpeedZ) * _FrequencyZ)* _AmplitudeZ * _HeadLimit;
+				// y(t)    += sin(              ωt                           + θ    ) * A           * _HeadLimit
+				v.vertex.x += sin(((0.05 + _Time.y * _SpeedZ) * _FrequencyZ) + _Phase) * _AmplitudeZ * _HeadLimit;
 			}
+			// If the vertices are within the HeadLimit
 			else
 			{
-				v.vertex.x += sin((v.vertex.z + _Time.y * _SpeedZ) * _FrequencyZ)* _AmplitudeZ * v.vertex.z;
+				v.vertex.x += sin(((v.vertex.z + _Time.y * _SpeedZ) * _FrequencyZ) + _Phase) * _AmplitudeZ * v.vertex.z;
 			}
+
 		}
 
 		void surf (Input IN, inout SurfaceOutputStandard o) 
