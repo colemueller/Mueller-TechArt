@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KelpMove : MonoBehaviour
+public class KelpMoveVar : MonoBehaviour
 {
     //public Transform target;
-    public float smoothTime = 4F;
-    public float xVelocity = 0.4F;
-    private float yVelocity = 0.0F;
-    private bool Direction = false; //up = true, down = false
+    float smoothTime = 4.5F;
+    float xVelocity = 0.3F;
+    float yVelocity = 0.0F;
+    bool Direction = false; //up = true, down = false
 
     // Update is called once per frame
     void Update()
@@ -20,7 +20,7 @@ public class KelpMove : MonoBehaviour
             float newPosition = Mathf.SmoothDamp(curAcc, (xVelocity), ref yVelocity, smoothTime);
             transform.GetComponent<Cloth>().externalAcceleration = new Vector3(newPosition, 0, (newPosition*-1));
 
-            if (curAcc >= 0.38F)
+            if (curAcc >= (xVelocity - 0.02F))
             {
                 Direction = false;
             }
@@ -31,7 +31,7 @@ public class KelpMove : MonoBehaviour
             float newPosition = Mathf.SmoothDamp(curAcc, (xVelocity*-1), ref yVelocity, smoothTime);
             transform.GetComponent<Cloth>().externalAcceleration = new Vector3(newPosition, 0, (newPosition*-1));
 
-            if (curAcc <= -0.38F)
+            if (curAcc <= ((xVelocity - 0.02F) * -1))
             {
                 Direction = true;
             }
