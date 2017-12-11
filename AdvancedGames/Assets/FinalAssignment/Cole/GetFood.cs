@@ -12,7 +12,7 @@ public class GetFood : MonoBehaviour {
     public GameObject BubbleBoost;
 
     private float tempSpeed;
-    private bool goUp = false;
+    public bool goUp = false;
     private float refVal = 0.0f;
 
 
@@ -85,6 +85,11 @@ public class GetFood : MonoBehaviour {
 	// ------------------------------------------------------
     private void Update()
 	{
+        //HOLD ON THERE BOI! SLOW DOWN
+        if(fishController.movespeed > 4)
+        {
+            fishController.movespeed = 4;
+        }
 		// ------------------------------------------------------
 		// BOOST SPEED:
 
@@ -94,7 +99,8 @@ public class GetFood : MonoBehaviour {
 		} 
 		else 
 		{
-			tempSpeed = Mathf.SmoothDamp (fishController.movespeed, 2, ref refVal, 3);
+            float refVal2 = 0.0f; 
+			tempSpeed = Mathf.SmoothDamp (fishController.movespeed, 2, ref refVal2, 3);
 		}
 
 		fishController.movespeed = tempSpeed;
@@ -158,6 +164,7 @@ public class GetFood : MonoBehaviour {
 	{
 		if (other.CompareTag("food"))
 		{
+            StopCoroutine(slowDown(0));
 			//fishController.movespeed = Mathf.Lerp(fishController.movespeed, fishController.movespeed * 3, 1 * Time.deltaTime);
 			goUp = true;
 			BubbleBoost.SetActive(true);
