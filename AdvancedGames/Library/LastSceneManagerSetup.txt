@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Assignment2/Gabe/main 1.unity
+- path: Assets/FinalAssignment/main.unity
   isLoaded: 1
   isActive: 1

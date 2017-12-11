@@ -1,26 +1,29 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEditor;
+﻿
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEditor;
+//using UnityEngine;
 
-[ExecuteInEditMode]
-public class RenderDepthMap : MonoBehaviour {
 
-    public Material mat;
+//[ExecuteInEditMode]
+//public class RenderDepthMap : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+//    public Material mat;
 
-        Camera.main.depthTextureMode = DepthTextureMode.Depth;
+//	// Use this for initialization
+//	void Start () {
 
-	}
+//        Camera.main.depthTextureMode = DepthTextureMode.Depth;
 
-    void OnRenderImage(RenderTexture src, RenderTexture des)
-    {
-        Graphics.Blit(src, des, mat);
-    }
+//	}
 
-    // Update is called once per frame
-    void Update () {
+//    void OnRenderImage(RenderTexture src, RenderTexture des)
+//    {
+//        Graphics.Blit(src, des, mat);
+//    }
+
+//    // Update is called once per frame
+//    void Update () {
 	
-	}
-}
+//	}
+//}

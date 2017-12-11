@@ -65,7 +65,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 			else
 			{
-				HandleAirborneMovement();
+				//HandleAirborneMovement();
 			}
 
 			ScaleCapsuleForCrouching(crouch);
@@ -153,14 +153,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 
-		void HandleAirborneMovement()
-		{
-			// apply extra gravity from multiplier:
-			Vector3 extraGravityForce = (Physics.gravity * m_GravityMultiplier) - Physics.gravity;
-			m_Rigidbody.AddForce(extraGravityForce);
+		//void HandleAirborneMovement()
+		//{
+		//	// apply extra gravity from multiplier:
+		//	Vector3 extraGravityForce = (Physics.gravity * m_GravityMultiplier) - Physics.gravity;
+		//	m_Rigidbody.AddForce(extraGravityForce);
 
-			m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
-		}
+		//	m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
+		//}
 
 
 		void HandleGroundedMovement(bool crouch, bool jump)
@@ -199,27 +199,27 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 
-		void CheckGroundStatus()
-		{
-			RaycastHit hitInfo;
+        void CheckGroundStatus()
+        {
+            //RaycastHit hitInfo;
 #if UNITY_EDITOR
-			// helper to visualise the ground check ray in the scene view
-			Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
+            // helper to visualise the ground check ray in the scene view
+            //Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
 #endif
-			// 0.1f is a small offset to start the ray from inside the character
-			// it is also good to note that the transform position in the sample assets is at the base of the character
-			if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
-			{
-				m_GroundNormal = hitInfo.normal;
-				m_IsGrounded = true;
-				m_Animator.applyRootMotion = true;
-			}
-			else
-			{
-				m_IsGrounded = false;
-				m_GroundNormal = Vector3.up;
-				m_Animator.applyRootMotion = false;
-			}
-		}
-	}
+            // 0.1f is a small offset to start the ray from inside the character
+            // it is also good to note that the transform position in the sample assets is at the base of the character
+            //if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
+            //{
+                //m_GroundNormal = hitInfo.normal;
+                m_IsGrounded = true;
+                m_Animator.applyRootMotion = true;
+            //}
+            //else
+            //{
+            //    m_IsGrounded = false;
+            //    m_GroundNormal = Vector3.up;
+            //    m_Animator.applyRootMotion = false;
+            //}
+        }
+    }
 }

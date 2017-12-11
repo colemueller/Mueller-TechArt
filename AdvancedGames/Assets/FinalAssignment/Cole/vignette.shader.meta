@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:AdvancedGames/Assets/FinalAssignment/Cole/vignette.shader.meta
+guid: 405fa8cde694d5149bc1e91abaa5af29
+timeCreated: 1511202315
+=======
+guid: 5919f3f55385f6140a2a48ea78370ed5
+folderAsset: yes
+timeCreated: 1511193140
+>>>>>>> develop:AdvancedGames/Assets/FinalAssignment/Gabe.meta
+licenseType: Free
+ShaderImporter:
+  defaultTextures:
+  - _MainTex: {instanceID: 0}
+  - _VigTex: {fileID: 2800000, guid: ce6dedce901ba0943b6bcaad777d84a3, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
