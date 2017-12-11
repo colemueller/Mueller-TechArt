@@ -17,7 +17,11 @@ public class Controller : MonoBehaviour {
 	private float blendLookUp;
 	private float blendLookDown;
    
-	public float speedReference;   
+	public float speedReference;
+
+    public float h = 0;
+    public float v = 0;
+    public float b = 0;
 
 	private void Start()
 	{
@@ -34,12 +38,27 @@ public class Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		// ------------------------------------------------------
-		// Player Inputs:
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
-        float h = Input.GetAxis("Horizontal");		// Side to side
-        float v = Input.GetAxis("Vertical");		// Forward
-        float b = Input.GetAxis("Bertical");		// Up and down
+
+        // ------------------------------------------------------
+        // Player Inputs:
+       
+            h = Input.GetAxis("Horizontal");  // Side to side
+        
+
+        
+            v = Input.GetAxis("Vertical");        // Forward
+        
+        
+
+        
+            b = Input.GetAxis("Bertical");        // Up and down
+        
+        
         //Debug.Log(v);
 
 

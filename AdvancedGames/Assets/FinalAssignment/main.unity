@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18066804, g: 0.2261732, b: 0.30712882, a: 1}
+  m_IndirectSpecularColor: {r: 0.1806679, g: 0.22617291, b: 0.3071284, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -11481,7 +11481,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.0006942749, y: 1.6435367, z: -0.2014575}
+    m_Center: {x: 0.0006952286, y: 1.6435367, z: -0.2014575}
     m_Extent: {x: 0.06629039, y: 1.6435361, z: 0.24699442}
   m_DirtyAABB: 0
 --- !u!183 &268855840
@@ -14084,8 +14084,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.0006926656, y: 1.6435368, z: -0.20145702}
-    m_Extent: {x: 0.30270523, y: 1.6435361, z: 0.24741948}
+    m_Center: {x: 0.0006927252, y: 1.6435368, z: -0.20145702}
+    m_Extent: {x: 0.30270526, y: 1.6435361, z: 0.24741948}
   m_DirtyAABB: 0
 --- !u!183 &369498705
 Cloth:
@@ -22923,8 +22923,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00069344044, y: 1.643536, z: -0.2014575}
-    m_Extent: {x: 0.20666206, y: 1.6435362, z: 0.24724662}
+    m_Center: {x: 0.000693202, y: 1.643536, z: -0.2014575}
+    m_Extent: {x: 0.20666203, y: 1.6435362, z: 0.24724662}
   m_DirtyAABB: 0
 --- !u!183 &610176164
 Cloth:
@@ -25678,8 +25678,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00069224834, y: 1.6435364, z: -0.20145607}
-    m_Extent: {x: 0.30270523, y: 1.6435361, z: 0.24741948}
+    m_Center: {x: 0.000692606, y: 1.6435364, z: -0.20145607}
+    m_Extent: {x: 0.30270526, y: 1.6435361, z: 0.24741948}
   m_DirtyAABB: 0
 --- !u!183 &757771992
 Cloth:
@@ -28505,8 +28505,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00069475174, y: 1.6435363, z: -0.20145464}
-    m_Extent: {x: 0.30518684, y: 1.643536, z: 0.24742399}
+    m_Center: {x: 0.0006952286, y: 1.6435363, z: -0.20145464}
+    m_Extent: {x: 0.3051869, y: 1.643536, z: 0.24742399}
   m_DirtyAABB: 0
 --- !u!183 &868227005
 Cloth:
@@ -30361,8 +30361,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.0006929636, y: 1.6435367, z: -0.20145607}
-    m_Extent: {x: 0.30270523, y: 1.6435361, z: 0.24741948}
+    m_Center: {x: 0.000693202, y: 1.6435367, z: -0.20145607}
+    m_Extent: {x: 0.30270526, y: 1.6435361, z: 0.24741948}
   m_DirtyAABB: 0
 --- !u!183 &920400585
 Cloth:
@@ -45218,8 +45218,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00069224834, y: 1.6435367, z: -0.20145655}
-    m_Extent: {x: 0.30270523, y: 1.6435361, z: 0.24741948}
+    m_Center: {x: 0.00069236755, y: 1.6435367, z: -0.20145655}
+    m_Extent: {x: 0.30270526, y: 1.6435361, z: 0.24741948}
   m_DirtyAABB: 0
 --- !u!183 &1183950867
 Cloth:
@@ -55438,7 +55438,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0.00069344044, y: 1.6435368, z: -0.2014556}
-    m_Extent: {x: 0.30270523, y: 1.6435361, z: 0.24741948}
+    m_Extent: {x: 0.30270526, y: 1.6435361, z: 0.24741948}
   m_DirtyAABB: 0
 --- !u!183 &1333051207
 Cloth:
@@ -59546,6 +59546,9 @@ MonoBehaviour:
   inverted: 1
   fishGameObject: {fileID: 818468681}
   speedReference: 0
+  h: 0
+  v: 0
+  b: 0
 --- !u!136 &1399034426
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -59587,6 +59590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishController: {fileID: 1399034425}
   BubbleBoost: {fileID: 956616982}
+  goUp: 0
   fishGameObject: {fileID: 818468681}
   swimCycleMat: {fileID: 2100000, guid: b40a3ce97049f4cb6867efc3d9b445a0, type: 2}
 --- !u!136 &1399034429
@@ -69852,6 +69856,7 @@ GameObject:
   - component: {fileID: 1572161512}
   - component: {fileID: 1572161514}
   - component: {fileID: 1572161513}
+  - component: {fileID: 1572161515}
   m_Layer: 0
   m_Name: pCylinder1
   m_TagString: Untagged
@@ -69912,6 +69917,20 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1572161511}
+  m_Mesh: {fileID: 4300000, guid: a498b49a9b95f4b6a821f062204620c8, type: 3}
+--- !u!64 &1572161515
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572161511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: a498b49a9b95f4b6a821f062204620c8, type: 3}
 --- !u!1001 &1578728108
 Prefab:
@@ -77091,8 +77110,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00069385767, y: 1.6435362, z: -0.20145607}
-    m_Extent: {x: 0.2066632, y: 1.6435361, z: 0.24724673}
+    m_Center: {x: 0.000693053, y: 1.6435362, z: -0.20145607}
+    m_Extent: {x: 0.20666319, y: 1.6435361, z: 0.24724673}
   m_DirtyAABB: 0
 --- !u!183 &1799937961
 Cloth:
@@ -82240,7 +82259,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00069367886, y: 1.6435362, z: -0.20145702}
+    m_Center: {x: 0.00069379807, y: 1.6435362, z: -0.20145702}
     m_Extent: {x: 0.20666191, y: 1.6435362, z: 0.2472466}
   m_DirtyAABB: 0
 --- !u!183 &1966256085
@@ -83479,8 +83498,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00069379807, y: 1.6435361, z: -0.20145702}
-    m_Extent: {x: 0.20666206, y: 1.6435362, z: 0.24724662}
+    m_Center: {x: 0.00069367886, y: 1.6435361, z: -0.20145702}
+    m_Extent: {x: 0.20666203, y: 1.6435362, z: 0.24724662}
   m_DirtyAABB: 0
 --- !u!183 &1994896209
 Cloth:

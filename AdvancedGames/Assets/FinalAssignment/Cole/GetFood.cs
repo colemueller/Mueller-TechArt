@@ -65,6 +65,7 @@ public class GetFood : MonoBehaviour {
         yield return new WaitForSeconds(3);
         Debug.Log("SLOW DOWN");
         BubbleBoost.SetActive(false);
+        fishController.movespeed = 2;
         //fishController.movespeed = Mathf.Lerp(fishController.movespeed, 2, 2);
     }
 
