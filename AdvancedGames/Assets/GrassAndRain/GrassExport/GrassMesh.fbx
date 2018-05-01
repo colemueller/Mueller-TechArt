@@ -8,13 +8,13 @@ FBXHeaderExtension:  {
 	FBXVersion: 7500
 	CreationTimeStamp:  {
 		Version: 1000
-		Year: 2017
-		Month: 10
-		Day: 23
-		Hour: 15
-		Minute: 10
-		Second: 34
-		Millisecond: 831
+		Year: 2018
+		Month: 5
+		Day: 1
+		Hour: 14
+		Minute: 51
+		Second: 40
+		Millisecond: 153
 	}
 	Creator: "FBX SDK/FBX Plugins version 2017.0.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -30,20 +30,20 @@ FBXHeaderExtension:  {
 			Comment: ""
 		}
 		Properties70:  {
-			P: "DocumentUrl", "KString", "Url", "", "C:\Users\muell_000\Desktop\TechArt\Mueller-TechArt\AdvancedGames\Assets\GrassAndRain\GrassMesh.fbx"
-			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\muell_000\Desktop\TechArt\Mueller-TechArt\AdvancedGames\Assets\GrassAndRain\GrassMesh.fbx"
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\muell_000\Desktop\TechArt\Mueller-TechArt\AdvancedGames\Assets\GrassAndRain\GrassExport\GrassMesh.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\muell_000\Desktop\TechArt\Mueller-TechArt\AdvancedGames\Assets\GrassAndRain\GrassExport\GrassMesh.fbx"
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "Maya"
 			P: "Original|ApplicationVersion", "KString", "", "", "2017"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "23/10/2017 19:10:34.812"
-			P: "Original|FileName", "KString", "", "", "C:\Users\muell_000\Desktop\TechArt\Mueller-TechArt\AdvancedGames\Assets\GrassAndRain\GrassMesh.fbx"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "01/05/2018 18:51:40.150"
+			P: "Original|FileName", "KString", "", "", "C:\Users\muell_000\Desktop\TechArt\Mueller-TechArt\AdvancedGames\Assets\GrassAndRain\GrassExport\GrassMesh.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "Maya"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2017"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "23/10/2017 19:10:34.812"
-			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\muell_000\Desktop\TechArt\Mueller-TechArt\AdvancedGames\Assets\GrassAndRain"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "01/05/2018 18:51:40.150"
+			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\muell_000\Desktop\TechArt\Mueller-TechArt\AdvancedGames\Assets\GrassAndRain\GrassExport"
 		}
 	}
 }
@@ -78,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 2078553879488, "", "Scene" {
+	Document: 2053479701824, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", "Take 001"
@@ -251,7 +251,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 2078556304512, "Geometry::", "Mesh" {
+	Geometry: 2053397452400, "Geometry::", "Mesh" {
 		Vertices: *72 {
 			a: 3.06161699911402e-016,-2.5,-2.5,-3.06161699911402e-016,-2.5,2.5,3.06161699911402e-016,2.5,-2.5,-3.06161699911402e-016,2.5,2.5,2.16506361961365,-2.5,1.25,-2.16506361961365,-2.5,-1.25,2.16506361961365,2.5,1.25,-2.16506361961365,2.5,-1.25,2.16506361961365,-2.5,-1.25,-2.16506361961365,-2.5,1.25,2.16506361961365,2.5,-1.25,-2.16506361961365,2.5,1.25,-2.16506361961365,-2.5,-1.25,2.16506361961365,-2.5,1.25,-2.16506361961365,2.5,-1.25,2.16506361961365,2.5,1.25,-2.16506361961365,-2.5,1.25,2.16506361961365,-2.5,-1.25,-2.16506361961365,2.5,1.25,2.16506361961365,2.5,-1.25,0,-2.5,2.5,0,-2.5,-2.5,0,2.5,2.5,0,2.5,-2.5
 		} 
@@ -268,7 +268,7 @@ Objects:  {
 			MappingInformationType: "ByVertice"
 			ReferenceInformationType: "Direct"
 			Normals: *72 {
-				a: -0.999999940395355,0,-1.22464672023627e-016,-0.999999940395355,0,-1.22464672023627e-016,-0.999999940395355,0,-1.22464672023627e-016,-0.999999940395355,0,-1.22464672023627e-016,0.499999940395355,0,-0.866025328636169,0.499999940395355,0,-0.866025328636169,0.499999940395355,0,-0.866025328636169,0.499999940395355,0,-0.866025328636169,-0.499999940395355,0,-0.866025328636169,-0.499999940395355,0,-0.866025328636169,-0.499999940395355,0,-0.866025328636169,-0.499999940395355,0,-0.866025328636169,-0.499999940395355,0,0.866025328636169,-0.499999940395355,0,0.866025328636169,-0.499999940395355,0,0.866025328636169,-0.499999940395355,0,0.866025328636169,0.499999940395355,0,0.866025328636169,0.499999940395355,0,0.866025328636169,0.499999940395355,0,0.866025328636169,0.499999940395355,0,0.866025328636169,0.999999940395355,0,0,0.999999940395355,0,0,0.999999940395355,0,0,0.999999940395355,0,0
+				a: -0.999999940395355,0,-1.22464672023627e-016,-0.999999940395355,0,-1.22464672023627e-016,-0.999999940395355,0,-1.22464672023627e-016,-0.999999940395355,0,-1.22464672023627e-016,0.5,0,-0.866025447845459,0.5,0,-0.866025447845459,0.5,0,-0.866025447845459,0.5,0,-0.866025447845459,-0.5,0,-0.866025447845459,-0.5,0,-0.866025447845459,-0.5,0,-0.866025447845459,-0.5,0,-0.866025447845459,-0.5,0,0.866025447845459,-0.5,0,0.866025447845459,-0.5,0,0.866025447845459,-0.5,0,0.866025447845459,0.5,0,0.866025447845459,0.5,0,0.866025447845459,0.5,0,0.866025447845459,0.5,0,0.866025447845459,0.999999940395355,0,0,0.999999940395355,0,0,0.999999940395355,0,0,0.999999940395355,0,0
 			} 
 			NormalsW: *24 {
 				a: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
@@ -311,9 +311,11 @@ Objects:  {
 			}
 		}
 	}
-	Model: 2078549918592, "Model::polySurface4", "Mesh" {
+	Model: 2053300738720, "Model::polySurface4", "Mesh" {
 		Version: 232
 		Properties70:  {
+			P: "RotationPivot", "Vector3D", "Vector", "",0,-2.5,0
+			P: "ScalingPivot", "Vector3D", "Vector", "",0,-2.5,0
 			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -323,7 +325,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 2078538771872, "Material::lambert2", "" {
+	Material: 2053425136720, "Material::lambert2", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -338,7 +340,7 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	AnimationStack: 2078561463792, "AnimStack::Take 001", "" {
+	AnimationStack: 2053429425440, "AnimStack::Take 001", "" {
 		Properties70:  {
 			P: "LocalStart", "KTime", "Time", "",1924423250
 			P: "LocalStop", "KTime", "Time", "",230930790000
@@ -346,7 +348,7 @@ Objects:  {
 			P: "ReferenceStop", "KTime", "Time", "",230930790000
 		}
 	}
-	AnimationLayer: 2078209472336, "AnimLayer::BaseLayer", "" {
+	AnimationLayer: 2053390721392, "AnimLayer::BaseLayer", "" {
 	}
 }
 
@@ -356,16 +358,16 @@ Objects:  {
 Connections:  {
 	
 	;Model::polySurface4, Model::RootNode
-	C: "OO",2078549918592,0
+	C: "OO",2053300738720,0
 	
 	;AnimLayer::BaseLayer, AnimStack::Take 001
-	C: "OO",2078209472336,2078561463792
+	C: "OO",2053390721392,2053429425440
 	
 	;Geometry::, Model::polySurface4
-	C: "OO",2078556304512,2078549918592
+	C: "OO",2053397452400,2053300738720
 	
 	;Material::lambert2, Model::polySurface4
-	C: "OO",2078538771872,2078549918592
+	C: "OO",2053425136720,2053300738720
 }
 ;Takes section
 ;----------------------------------------------------
