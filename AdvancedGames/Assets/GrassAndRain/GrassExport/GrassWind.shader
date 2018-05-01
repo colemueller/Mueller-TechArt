@@ -1,108 +1,123 @@
-﻿Shader "Custom/GrassWind"
-{
+﻿
+Shader "Grass/GrassWind" {
+
 	Properties
 	{
-		_RampTex("Ramp", 2D) = "white" {}
-	_Color("Color", Color) = (1, 1, 1, 1)
-		_WaveSpeed("Wave Speed", float) = 1.0
-		_WaveAmp("Wave Amp", float) = 1.0
-		_HeightFactor("Height Factor", float) = 1.0
-		_HeightCutoff("Height Cutoff", float) = 1.2
-		_WindTex("Wind Texture", 2D) = "white" {}
-	_WorldSize("World Size", vector) = (1, 1, 1, 1)
-		_WindSpeed("Wind Speed", vector) = (1, 1, 1, 1)
+		_Color ("Color", Color) = (1,1,1,1)
+		_MainTex("Albedo (RGB)", 2D) = "white" {}
+		_Cutoff("Alpha cutoff", Range(0,1)) = 0.1
+		_Glossiness ("Smoothness", Range(0,1)) = 0.5
+		_Metallic ("Metallic", Range(0,1)) = 0.0
+
+		_SpeedX("SpeedX", Range(0, 10)) = 1
+		_FrequencyX("FrequencyX", Range(0, 10)) = 1
+		_AmplitudeX("AmplitudeX", Range(0, 0.2)) = 1
+
+		_SpeedY("SpeedY", Range(0, 10)) = 1
+		_FrequencyY("FrequencyY", Range(0, 10)) = 1
+		_AmplitudeY("AmplitudeY", Range(0, 0.2)) = 1
+
+		_SpeedZ("SpeedZ", Range(0, 10)) = 1
+		_FrequencyZ("FrequencyZ", Range(0, 10)) = 1
+		_AmplitudeZ("AmplitudeZ", Range(0,  2)) = 1
+
+		_Phase("Phase", Range(-10, 10)) = 0
+		_HeadLimit("HeadLimit", Range(-2,  2)) = 0.05
 	}
 
-		SubShader
+	SubShader
 	{
-		Pass
-	{
-		Tags
-	{
-		"DisableBatching" = "True"
-	}
+		Tags{ "RenderType" = "Opaque" }
+		LOD 200
+		//Cull off
 
 		CGPROGRAM
-#pragma vertex vert
-#pragma fragment frag
-#pragma multi_compile_fwdbase // shadows
-#include "UnityCG.cginc"
+		#pragma surface surf Standard fullforwardshadows vertex:vert addshadow 
+		
+		#pragma target 3.0
 
-		// Properties
-		sampler2D _RampTex;
-	sampler2D _WindTex;
-	float4 _WindTex_ST;
-	float4 _Color;
-	float4 _LightColor0; // provided by Unity
-	float4 _WorldSize;
-	float _WaveSpeed;
-	float _WaveAmp;
-	float _HeightFactor;
-	float _HeightCutoff;
-	float4 _WindSpeed;
+		sampler2D _MainTex;
 
-	struct vertexInput
-	{
-		float4 vertex : POSITION;
-		float3 normal : NORMAL;
-	};
+		struct Input 
+		{
+			float2 uv_MainTex;
+		};
 
-	struct vertexOutput
-	{
-		float4 pos : SV_POSITION;
-		float3 normal : NORMAL;
-		//float2 sp : TEXCOORD0; // test sample position
-	};
+		half _Glossiness;
+		half _Metallic;
+		fixed4 _Color;
+		half _Cutoff;
+		// X AXIS
 
-	vertexOutput vert(vertexInput input)
-	{
-		vertexOutput output;
+		float _SpeedX;
+		float _FrequencyX;
+		float _AmplitudeX;
 
-		// convert input to clip & world space
-		output.pos = UnityObjectToClipPos(input.vertex);
-		float4 normal4 = float4(input.normal, 0.0);
-		output.normal = normalize(mul(normal4, unity_WorldToObject).xyz);
+		// Y AXIS
 
-		// get vertex world position
-		float4 worldPos = mul(input.vertex, unity_ObjectToWorld);
-		// normalize position based on world size
-		float2 samplePos = worldPos.xz / _WorldSize.xz;
-		// scroll sample position based on time
-		samplePos += _Time.x * _WindSpeed.xy;
-		// sample wind texture
-		float windSample = tex2Dlod(_WindTex, float4(samplePos, 0, 0));
+		float _SpeedY;
+		float _FrequencyY;
+		float _AmplitudeY;
 
-		//output.sp = samplePos; // test sample position
+		// Z AXIS
 
-		// 0 animation below _HeightCutoff
-		float heightFactor = input.vertex.y > _HeightCutoff;
-		// make animation stronger with height
-		heightFactor = heightFactor * pow(input.vertex.y, _HeightFactor);
+		float _SpeedZ;
+		float _FrequencyZ;
+		float _AmplitudeZ;
 
-		// apply wave animation
-		output.pos.z += sin(_WaveSpeed*windSample)*_WaveAmp * heightFactor;
-		output.pos.x += cos(_WaveSpeed*windSample)*_WaveAmp * heightFactor;
+		// Head Limit (Head wont shake so much)
 
-		return output;
-	}
+		float _Phase;
+		float _HeadLimit;
 
-	float4 frag(vertexOutput input) : COLOR
-	{
-		// normalize light dir
-		float3 lightDir = normalize(_WorldSpaceLightPos0.xyz);
 
-		// apply lighting
-		float ramp = clamp(dot(input.normal, lightDir), 0.001, 1.0);
-		float3 lighting = tex2D(_RampTex, float2(ramp, 0.5)).rgb;
+		void vert( inout appdata_full v )
+		{
+			//Y AXIS
 
-		//return float4(frac(input.sp.x), 0, 0, 1); // test sample position
+			// If the vertices are beyond the HeadLimit
+			if (v.vertex.y > _HeadLimit)
+			{
+				// y(t)    += sin(              ωt                           + θ    ) * A           * _HeadLimit
+				v.vertex.y += sin(((0.05 + _Time.y * _SpeedY) * _FrequencyY) + _Phase) * _AmplitudeY * _HeadLimit;
+			}
+			// If the vertices are within the HeadLimit
+			else
+			{
+				v.vertex.y += sin(((v.vertex.z + _Time.y * _SpeedY) * _FrequencyY) + _Phase) * _AmplitudeY * v.vertex.y;
+			}
 
-		float3 rgb = _LightColor0.rgb * lighting * _Color.rgb;
-		return float4(rgb, 1.0);
-	}
+			//XZ AXIS
+
+			// If the vertices are beyond the HeadLimit
+			if (v.vertex.y > _HeadLimit)
+			{
+				// y(t)    += sin(              ωt                           + θ    ) * A           * _HeadLimit
+				v.vertex.z += sin(((0.05 + _Time.y * _SpeedZ) * _FrequencyZ) + _Phase) * _AmplitudeZ * _HeadLimit;
+			}
+			// If the vertices are within the HeadLimit
+			else
+			{
+				v.vertex.z += sin(((v.vertex.z + _Time.y * _SpeedZ) * _FrequencyZ) + _Phase) * _AmplitudeZ * v.vertex.y;
+			}
+
+
+		}
+
+		void surf (Input IN, inout SurfaceOutputStandard o) 
+		{
+			// Albedo comes from a texture tinted by color
+			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+			clip(c.a - _Cutoff);
+			o.Albedo = c.rgb;
+			// Metallic and smoothness come from slider variables
+			o.Metallic = _Metallic;
+			o.Smoothness = _Glossiness;
+			o.Alpha = c.a;
+		}
 
 		ENDCG
+		
 	}
-
-	}
+	FallBack "Diffuse"
 }

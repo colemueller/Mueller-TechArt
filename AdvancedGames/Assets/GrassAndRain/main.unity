@@ -211,7 +211,7 @@ Prefab:
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassNumber
-      value: 1000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
@@ -222,7 +222,7 @@ Prefab:
         type: 2}
       propertyPath: material
       value: 
-      objectReference: {fileID: 2100000, guid: 64e70714daaab1c4ab2a8dda5f127ce0, type: 2}
+      objectReference: {fileID: 2100000, guid: 90dce168277a25e4d94dfc86d8a066c9, type: 2}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassWidthRange.x
