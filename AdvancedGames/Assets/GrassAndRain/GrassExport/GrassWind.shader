@@ -87,7 +87,7 @@ Shader "Grass/GrassWind" {
 				v.vertex.y += sin(((v.vertex.z + _Time.y * _SpeedY) * _FrequencyY) + _Phase) * _AmplitudeY * v.vertex.y;
 			}
 
-			//XZ AXIS
+			//Z AXIS
 
 			// If the vertices are beyond the HeadLimit
 			if (v.vertex.y > _HeadLimit)
@@ -99,6 +99,19 @@ Shader "Grass/GrassWind" {
 			else
 			{
 				v.vertex.z += sin(((v.vertex.z + _Time.y * _SpeedZ) * _FrequencyZ) + _Phase) * _AmplitudeZ * v.vertex.y;
+			}
+
+			//X Axis
+			// If the vertices are beyond the HeadLimit
+			if (v.vertex.y > _HeadLimit)
+			{
+				// y(t)    += sin(              ωt                           + θ    ) * A           * _HeadLimit
+				v.vertex.x += sin(((0.05 + _Time.y * _SpeedX) * _FrequencyX) + _Phase) * _AmplitudeX * _HeadLimit;
+			}
+			// If the vertices are within the HeadLimit
+			else
+			{
+				v.vertex.x += sin(((v.vertex.z + _Time.y * _SpeedX) * _FrequencyX) + _Phase) * _AmplitudeX * v.vertex.y;
 			}
 
 

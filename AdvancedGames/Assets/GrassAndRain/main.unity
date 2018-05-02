@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17964613, g: 0.22493672, b: 0.3064901, a: 1}
+  m_IndirectSpecularColor: {r: 0.17964569, g: 0.22493581, b: 0.30648947, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -201,12 +201,12 @@ Prefab:
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: size.x
-      value: 10
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: size.y
-      value: 10
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
@@ -226,22 +226,22 @@ Prefab:
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassWidthRange.x
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassWidthRange.y
-      value: 0.6
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassHeightRange.x
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassHeightRange.y
-      value: 1.6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
@@ -252,7 +252,7 @@ Prefab:
         type: 2}
       propertyPath: grassMesh
       value: 
-      objectReference: {fileID: 4300000, guid: 20fda7a9db89d0a4990b4411c3293ea6, type: 3}
+      objectReference: {fileID: 4300002, guid: 58af21e5e00a00141b2104a359a43003, type: 3}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: GeneratorStartHeight
@@ -7580,7 +7580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1294351292
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7641,7 +7641,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1294351291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.1, y: 21.2, z: -4.2}
+  m_LocalPosition: {x: 18.6, y: 7.42, z: -15.3}
   m_LocalScale: {x: 24.459974, y: 24.459978, z: 24.459978}
   m_Children: []
   m_Father: {fileID: 0}
