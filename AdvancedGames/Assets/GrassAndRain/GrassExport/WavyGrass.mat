@@ -39,9 +39,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d6cdc79ec19714fcd980ca3f6ac01a0a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0, y: -0.03}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,17 +63,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AmplitudeX: 0
-    - _AmplitudeY: 0.15
-    - _AmplitudeZ: 0.1
+    - _AmplitudeX: 0.01
+    - _AmplitudeY: 0.015
+    - _AmplitudeZ: 0.17
     - _BumpScale: 1
     - _ClipCutoff: 0
     - _Cutoff: 0.29
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FrequencyX: 0
-    - _FrequencyY: 2
-    - _FrequencyZ: 2
+    - _FrequencyX: 0.71
+    - _FrequencyY: 1.38
+    - _FrequencyZ: 0.84
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -87,9 +87,9 @@ Material:
     - _Phase: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpeedX: 0
-    - _SpeedY: 1
-    - _SpeedZ: 1
+    - _SpeedX: 0.64
+    - _SpeedY: 0.57
+    - _SpeedZ: 0.77
     - _SrcBlend: 1
     - _UVSec: 0
     - _WaveAmp: 1
@@ -99,7 +99,7 @@ Material:
     - _WindVariance: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.3529412, g: 0.6397059, b: 0.23988971, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _WindSpeed: {r: 1, g: 1, b: 1, a: 1}
     - _WorldSize: {r: 1, g: 1, b: 1, a: 1}

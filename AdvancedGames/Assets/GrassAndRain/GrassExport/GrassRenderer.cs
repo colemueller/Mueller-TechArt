@@ -48,8 +48,10 @@ public class GrassRenderer : MonoBehaviour {
 
                 float grassWidth = Random.Range(grassWidthRange.x, grassWidthRange.y);
                 float grassHeight = Random.Range(grassHeightRange.x, grassHeightRange.y);
+                float randRotation = Random.Range(0, 180);
+                Quaternion rotation = Quaternion.Euler(0, randRotation, 0);
                 //Quaternion.identity
-                materices.Add(Matrix4x4.TRS(origin, this.transform.rotation, new Vector3(1 * grassWidth, 1 * grassHeight, 1 * grassWidth)));
+                materices.Add(Matrix4x4.TRS(origin, rotation, new Vector3(1 * grassWidth, 1 * grassHeight, 1 * grassWidth)));
             }
 
         }

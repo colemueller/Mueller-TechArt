@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17964569, g: 0.22493581, b: 0.30648947, a: 1}
+  m_IndirectSpecularColor: {r: 0.17964613, g: 0.22493672, b: 0.3064901, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 631382935}
     m_Modifications:
     - target: {fileID: 4074800555479118, guid: c71487bcb3bba274d96195b6620a8dbb, type: 2}
       propertyPath: m_LocalPosition.x
@@ -175,15 +175,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4074800555479118, guid: c71487bcb3bba274d96195b6620a8dbb, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4074800555479118, guid: c71487bcb3bba274d96195b6620a8dbb, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4074800555479118, guid: c71487bcb3bba274d96195b6620a8dbb, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4074800555479118, guid: c71487bcb3bba274d96195b6620a8dbb, type: 2}
       propertyPath: m_LocalRotation.w
@@ -191,7 +191,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4074800555479118, guid: c71487bcb3bba274d96195b6620a8dbb, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
@@ -201,17 +201,17 @@ Prefab:
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: size.x
-      value: 75
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: size.y
-      value: 75
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassNumber
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
@@ -231,22 +231,32 @@ Prefab:
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassWidthRange.y
-      value: 1.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassHeightRange.x
-      value: 0.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: grassHeightRange.y
-      value: 1
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
         type: 2}
       propertyPath: RegenerateGrass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
+        type: 2}
+      propertyPath: grassMesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 20fda7a9db89d0a4990b4411c3293ea6, type: 3}
+    - target: {fileID: 114260436293758944, guid: c71487bcb3bba274d96195b6620a8dbb,
+        type: 2}
+      propertyPath: GeneratorStartHeight
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c71487bcb3bba274d96195b6620a8dbb, type: 2}
@@ -3714,7 +3724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &563151885
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3910,6 +3920,35 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdc330b4b1b566248bd07c1353eace38, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &631382934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 631382935}
+  m_Layer: 0
+  m_Name: Grass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &631382935
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631382934}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1075229752}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903178740
 GameObject:
   m_ObjectHideFlags: 0
@@ -7400,6 +7439,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!4 &1075229752 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4074800555479118, guid: c71487bcb3bba274d96195b6620a8dbb,
+    type: 2}
+  m_PrefabInternal: {fileID: 355162302}
 --- !u!1 &1085629307
 GameObject:
   m_ObjectHideFlags: 0
@@ -7597,8 +7641,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1294351291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.38, y: 1.38, z: -33.57}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 27.1, y: 21.2, z: -4.2}
+  m_LocalScale: {x: 24.459974, y: 24.459978, z: 24.459978}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -8020,7 +8064,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a0de6ae755b0fab40bd8668177137040, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
