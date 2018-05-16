@@ -64,11 +64,11 @@ public class Controller : MonoBehaviour {
 
 		// ------------------------------------------------------
 		// Forward Speed:
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButtonDown("Fire1"))
         {
             movespeed += 1f;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetButtonDown("Fire1"))
         {
             movespeed -= 1f;
         }
